@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script>
+		function validate()
+		{
+		if(document.myForm.Name.value=="")
+		{
+		document.getElementById("Name").innerHTML="<span style ='color: red;'>please enter name</span> ";
+		document.myForm.Name.focus();
+		return false;
+		}
+		if(document.myForm.Pass.value=="")
+		{
+		document.getElementById("Pass").innerHTML="<span style='color: red;'>please enter Password</span> ";
+		document.myForm.Pass.focus();
+		return false;
+		}
+		retun(true);
+		}
+		</script>
+	</head>
+	<body>
+	
+	
+	<form action ="validaton.jsp" name="myForm" onsubmit="return(validate());">
+		ENTER NAME-<input type="text" name="Name" /> <span id="Name"></span><br>
+		ENTER PASSWORD--<input type="password"  name="Pass" /> <span id="Pass"></span><br>
+		<input type="submit">
+	</form>
+	
+	</body>
+</html>
